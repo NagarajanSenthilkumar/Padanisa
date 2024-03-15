@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Padanisa</title>
+    <link rel="icon" th:href="@{/image/logooo.png}" />
+    <link rel="stylesheet" th:href=@{/CSS/index.css} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="background-image"></div>
+      <div class="container">
+        <div class="logo-container">
+          <img src="/image/logo.png" alt="Logo" />
+          <a href="customerregister">Customer</a>
+        </div>
+        <div class="form-container">
+          <form action="register" method="post">
+            <h3>
+              Create an Account as Admin
+              <span>Get Into an Music World</span>
+            </h3>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="email"
+              required
+              name="email"
+            />
+
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              id="password"
+              required
+              name="password"
+            />
+
+            <label>Gender:</label>
+            <div class="radio-group">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="Male"
+                required
+              />
+              <label for="male">Male</label>
+
+              <input type="radio" name="gender" id="female" value="Female" />
+              <label for="female">Female</label>
+
+              <input type="radio" name="gender" id="other" value="Other" />
+              <label for="other">Other</label>
+            </div>
+            <div class="buttons">
+              <button type="submit" name="role" value="Admin">Register</button>
+              <a href="login">Already have a account login?</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Padanisa</title>
+<link rel="icon" th:href="@{/image/logooo.png}" />
+<link rel="stylesheet" th:href="@{/CSS/viewplaylist.css}">
+</head>
+<body>
+ <div class="background-container">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/image/logo.png" alt="Logo" />
+                <div class="nav">
+	                <a href="home">Home</a>
+	                <a href="login">Logout</a>
+	            </div>
+            </div>
+            <div class="form-container">
+  <h1>PlayLists</h1>
+
+  <table border=1>
+    <thead>
+      <tr>
+          <th>PlayList Name</th>
+          <th>PlayList Songs</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+          <tr th:each="plistview : ${plistview}">
+          <td th:text="${plistview.name}"></td>
+          <td>
+              <ul>
+                 <li th:each="s:${plistview.Song}">
+                    <span th:text="${s.name}"></span>
+                   <audio controls loop>
+                   	<source th:src="${s.link}" type="audio/mpeg">
+                  </audio>
+                </li>
+              </ul>
+          </td>
+    </tbody>
+  </table>
+</body>
+</html>

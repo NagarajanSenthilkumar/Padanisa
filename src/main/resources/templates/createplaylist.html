@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Padanisa</title>
+<link rel="icon" th:href="@{/image/logooo.png}" />
+<link rel="stylesheet" th:href="@{/CSS/createplayliist.css}">
+</head>
+<body>
+<div>
+<div class="background-container">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/image/logo.png" alt="Logo" />
+                  <div class="nav">
+	                <a href="home">Home</a>
+	                <a href="mapviewplaylist">View Playlist</a>
+	                <a href="login">Logout</a>
+	            </div>
+            </div>
+            <div class="form-container">
+    <form action="addPlaylist" method="post">
+      <label>Playlist Name:</label> 
+      <input type="text" name="Name" required/> <br>
+      <div th:each="songlist : ${songlist}">
+      <input type="checkbox" th:name="song" th:value="${songlist.id}">
+      <label th:text = "${songlist.name}"></label>
+      </div>
+        <button type="submit">CREATE PLAYLIST</button>
+    </form>
+  </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Padanisa</title>
+<link rel="icon" th:href="@{/image/logooo.png}" />
+<link rel="stylesheet" th:href="@{/CSS/createplayliist.css}">
+</head>
+<body>
+<div>
+<div class="background-container">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/image/logo.png" alt="Logo" />
+                  <div class="nav">
+	                <a href="home">Home</a>
+	                <a href="mapviewplaylist">View Playlist</a>
+	                <a href="login">Logout</a>
+	            </div>
+            </div>
+            <div class="form-container">
+    <form action="addPlaylist" method="post">
+      <label>Playlist Name:</label> 
+      <input type="text" name="Name" required/> <br>
+      <div th:each="songlist : ${songlist}">
+      <input type="checkbox" class="song-checkbox" th:name="song" th:value="${songlist.id}">
+      <label th:text = "${songlist.name}"></label>
+      </div>
+        <button type="submit" id="createPlaylistBtn" disabled>CREATE PLAYLIST</button>
+    </form>
+  </div>
+</body>
+<script>
+  // Get the checkbox elements
+  var checkboxes = document.querySelectorAll('.song-checkbox');
+  // Get the button element
+  var createPlaylistBtn = document.getElementById('createPlaylistBtn');
+
+  // Add event listener to each checkbox
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+      // Check if any checkbox is checked
+      var isChecked = Array.from(checkboxes).some(function(checkbox) {
+        return checkbox.checked;
+      });
+
+      // Enable or disable the button based on checkbox status
+      if (isChecked) {
+        createPlaylistBtn.disabled = false;
+      } else {
+        createPlaylistBtn.disabled = true;
+      }
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,145 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0; /* Set your desired background color */
+        }
+
+      
+        .background-container {
+             height: 100vh;
+            overflow:auto;/* Hide overflow to prevent scrolling on the body */
+        }
+
+        .background-image {
+            background-image: url(/image/MUSIC.png);
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Send it to the background */
+        }
+
+        .form-container {
+            width: 60%;
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 10px;
+            backdrop-filter: blur(75px);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+            padding: 30px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .logo-container {
+            display: flex;
+            padding-left: 30px;
+            padding-right: 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding-top: 15px;
+         justify-content: space-between;
+        font-family: "Poppins", sans-serif;
+        }
+          .logo-container a {
+            background-color: #fff;
+        color: #3A0C94;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px;
+        text-decoration: none;
+        font-family: Poppins, sans-serif;
+      }
+      .logo-container a:hover{
+         background-color: #3A0C94;
+         color:#fff;
+      }
+        .logo-container img {
+            width: 132px; /* Adjust the width of the logo as needed */
+            height: auto; /* Maintain the aspect ratio */
+        }
+
+        h1 {
+        font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        table {
+              width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+          th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+               backdrop-filter: blur(75px);
+    border: 1px soild #ddd;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        }
+
+        tbody td {
+            /* Set your desired background color for table cells */
+            color: #fff; /* Set your desired text color for table cells */
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        audio::-webkit-media-controls-play-button,
+        audio::-webkit-media-controls-pause-button,
+        audio::-webkit-media-controls-volume-slider {
+            background-color: #ffffff;
+            border-radius: 25px;
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+            color: #ffffff;
+        }
+
+        audio::-webkit-media-controls-seek-back-button,
+        audio::-webkit-media-controls-seek-forward-button {
+            background-color: #ffffff;
+            border-radius: 50%;
+        }

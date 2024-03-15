@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Padanisa</title>
+<link rel="icon" th:href="@{/image/logooo.png}" />
+    <link rel="stylesheet" th:href="@{/CSS/addsongs.css}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div class="background-container">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/image/logo.png" alt="Logo" />
+                <div class="nav">
+	                <a href="home">Home</a>
+	                <a href="viewsong">View Songs</a>
+	                <a href="login">Logout</a>
+	            </div>
+            </div>
+            <div class="form-container">
+<form action="addsongs" method="post">
+    <h1>Song is Already Added</h1>
+	<label for="name">Song Name:</label>
+    <input type="text" id="name" required name="name"/>
+    <label for="artist">Song Artist:</label>
+    <input type="text" id="artist" required name="artist"/>
+    <label for="genre">Song Genre:</label>
+    <input type="text" id="genre" required name="genre"/>
+    <label for="link">Song Link:</label>
+    <input type="text" id="link" required name="link"/>
+    <button type="submit">ADD SONGS</button>
+</form>
+</body>
+</html>

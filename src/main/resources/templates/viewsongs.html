@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Padanisa</title>
+<link rel="icon" th:href="@{/image/logooo.png}" />
+<link rel="stylesheet" th:href="@{/CSS/viewsongs.css}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+   <div class="background-container">
+        <div class="background-image"></div>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/image/logo.png" alt="Logo" />
+                 <div class="nav">
+	                <a href="home">Home</a>
+	                <a href="map-playlist">Create Playlist</a>
+	                <a href="login">Logout</a>
+	            </div>
+            </div>
+            <div class="form-container">
+	<form action="song" method="get">
+	<div class="home">
+		<h1>My Music</h1>
+		<button th:href="song">Add Song</button>
+		</div>
+		<table border="1">
+			<tr>
+				<th>name</th>
+				<th>artist</th>
+				<th>genre</th>
+				<th>link</th>
+			</tr>
+			<tr th:each="song:${song}">
+				<td th:text="${song.name}"></td>
+				<td th:text="${song.artist}"></td>
+				<td th:text="${song.genre}"></td>
+				<td><audio controls>
+						<source th:src="${song.link}" type="audio/mpeg">
+					</audio></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
